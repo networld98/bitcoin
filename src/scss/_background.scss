@@ -1,0 +1,13 @@
+@each $name, $color in $foundation-palette {
+  .background-#{$name} {
+    background: $color;
+    color: color-pick-contrast($color, ($white, $black));
+
+  }
+}
+.background-stars {
+  display: block;
+  height: 100%;
+  background: $darkslategray url($imagesPath + "/stars.png")no-repeat top center;
+}
+

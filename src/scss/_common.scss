@@ -1,0 +1,67 @@
+
+a {
+  -webkit-transition: color 300ms ease-in-out;
+  -moz-transition: color 300ms ease-in-out;
+  -ms-transition: color 300ms ease-in-out;
+  -o-transition: color 300ms ease-in-out;
+  transition: color 300ms ease-in-out;
+}
+
+table {
+  margin-bottom: 6 * $global-margin;
+}
+h1{
+  font-family: Roboto-Medium;
+  color: $white;
+}
+h2, h3, h4{
+  font-family: Roboto-Bold;
+  color: $white;
+}
+h2, h3, h4{
+  font-family: Roboto-Bold;
+  color: $white;
+}
+@mixin position-center() {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+.text-center h1, .text-center h2, h1.text-center, h2.text-center {
+  &:after {
+    @include position-center();
+  }
+}
+
+@include breakpoint(medium up) {
+  .medium-text-center h1, .medium-text-center h2, h1.medium-text-center, h2.medium-text-center {
+    &:after {
+      @include position-center();
+    }
+  }
+}
+
+@include breakpoint(large up) {
+  .large-text-center h1, .large-text-center h2, h1.large-text-center, h2.large-text-center {
+    &:after {
+      @include position-center();
+    }
+  }
+  html, body {
+    height: 100%;
+  }
+  .no-margin {
+    margin-right: -1.5rem!important;
+    margin-left: -1.5rem!important;
+    &>.cell {
+      padding-right: 1rem!important;
+      padding-left: 1rem!important;
+    }
+  }
+}
+
+.fa-layers {
+  vertical-align: middle;
+}

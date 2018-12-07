@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="copyright" content="Тестовое задание">
+    <meta name="author" content="Networld">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="background-stars">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x">
+          <div class="select-block text-white">
+            <div class="grid-x grid-padding-x">
+              <div class="small-24 large-16 cell text-center">
+                <h1>Select currency to exhange:</h1>
+              </div>
+              <div class="small-24 large-8 cell">
+                <div class="select">
+                  <select>
+                    <option value="0">USD</option>
+                    <option value="1">EUR</option>
+                    <option value="2">RUB</option>
+                    <option value="3">GBP</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x no-margin">
+          <div class="small-24 medium-12 large-8 cell">
+            <div class="ethereum coins">
+              <h2>Ethereum</h2><img src="./images/ethereum.png">
+              <div class="grid-x coins__text">
+                <div class="small-12 text-left">
+                  <h4>Price:</h4>
+                  <p class="change"><strong>Percent change</strong></p>
+                  <p>Hour change</p>
+                  <p>Day change</p>
+                  <p>Week change</p>
+                  <p>Month change</p>
+                </div>
+                <div class="small-12 price-text text-right">
+                  <h3>$<span id="priceETH">22 526.92</span></h3>
+                  <div class="switch-wrapper">
+                    <div class="switch"><img class="point" src="./images/radio.png"></div>
+                  </div>
+                  <p><span class="price" id="hourETH-price"></span><span class="percent" id="hourETH-percent"></span></p>
+                  <p><span class="price" id="dayETH-price"></span><span class="percent" id="dayETH-percent"></span></p>
+                  <p><span class="price" id="weekETH-price"></span><span class="percent" id="weekETH-percent"></span></p>
+                  <p><span class="price" id="monthETH-price"></span><span class="percent" id="monthETH-percent"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="small-24 medium-12 large-8 cell">
+            <div class="litecoin coins">
+              <h2>Litecoin</h2><img src="./images/litecoin.png">
+              <div class="grid-x coins__text">
+                <div class="small-12 text-left">
+                  <h4>Price:</h4>
+                  <p class="change"><strong>Percent change</strong></p>
+                  <p>Hour change</p>
+                  <p>Day change</p>
+                  <p>Week change</p>
+                  <p>Month change</p>
+                </div>
+                <div class="small-12 price-text text-right">
+                  <h3>$<span id="priceLTC">22 526.92</span></h3>
+                  <div class="switch-wrapper">
+                    <div class="switch"><img class="point" src="./images/radio.png"></div>
+                  </div>
+                  <p><span class="price" id="hourLTC-price"></span><span class="percent" id="hourLTC-percent"></span></p>
+                  <p><span class="price" id="dayLTC-price"></span><span class="percent" id="dayLTC-percent"></span></p>
+                  <p><span class="price" id="weekLTC-price"></span><span class="percent" id="weekLTC-percent"></span></p>
+                  <p><span class="price" id="monthLTC-price"></span><span class="percent" id="monthLTC-percent"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="small-24 medium-12 large-8 cell">
+            <div class="bitcoin coins">
+              <h2>Bitcoin</h2><img src="./images/bitcoin.png">
+              <div class="grid-x coins__text">
+                <div class="small-12 text-left">
+                  <h4>Price:</h4>
+                  <p class="change"><strong>Percent change</strong></p>
+                  <p>Hour change</p>
+                  <p>Day change</p>
+                  <p>Week change</p>
+                  <p>Month change</p>
+                </div>
+                <div class="small-12 price-text text-right">
+                  <h3>$<span id="priceBTC">22 526.92</span></h3>
+                  <div class="switch-wrapper">
+                    <div class="switch"><img class="point" src="./images/radio.png"></div>
+                  </div>
+                  <p><span class="price" id="hourBTC-price"></span><span class="percent" id="hourBTC-percent"></span></p>
+                  <p><span class="price" id="dayBTC-price"></span><span class="percent" id="dayBTC-percent"></span></p>
+                  <p><span class="price" id="weekBTC-price"></span><span class="percent" id="weekBTC-percent"></span></p>
+                  <p><span class="price" id="monthBTC-price"></span><span class="percent" id="monthBTC-percent"></span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--script window.FontAwesomeConfig = { showMissingIcons: false }-->
+      <script src="js/lib.js"></script>
+      <script src="js/jquery.formstyler.min.js"></script>
+      <script src="js/app.js"></script>
+      <!--script(src='https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js' defer)-->
+    </div>
+  </body>
+</html>

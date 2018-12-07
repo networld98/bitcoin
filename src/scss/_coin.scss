@@ -1,0 +1,84 @@
+.ethereum{
+  border-radius: $global-radius;
+  background: $medium-green url($imagesPath + "/block-e.png")no-repeat;
+  &>img{
+    margin: rem-calc(-60 0 -47 14);
+  }
+  h2 {
+    position: relative;
+    z-index: 2;
+  }
+}
+.litecoin {
+  border-radius: $global-radius;
+  background: $dark-gray url($imagesPath + "/block-l.png")no-repeat;
+  &>img{
+    margin: rem-calc(-7 0 10 -2);
+  }
+}
+.bitcoin{
+  border-radius: $global-radius;
+  background: $darkbrown url($imagesPath + "/block-b.png")no-repeat;
+  &>img{
+    margin: rem-calc(-21 0 -7 21);
+
+  }
+}
+.coins{
+  text-align: center;
+  background-size: 100%;
+  padding: rem-calc(21 0 16 0);
+  margin: rem-calc(15 0);
+  &__text{
+    padding: rem-calc(0 30);
+    h3 {
+      margin-bottom: rem-calc(11);
+      color: $white;
+    }
+    h4 {
+      margin-bottom: rem-calc(8);
+      color: $white;
+    }
+    p{
+      font-family: Roboto-Bold;
+      color: rgba(255, 255, 255, 0.2);
+      margin-bottom: rem-calc(1.5);
+    }
+    p.change {
+      margin-bottom: rem-calc(4);
+      color: $white;
+    }
+    .price{
+      &-text p {
+        color: $green;
+      }
+    }
+    .percent{
+      display: none;
+    }
+
+  }
+  .switch {
+      position: relative;
+      border-radius: $global-radius;
+      background-color: rgb(62, 181, 241);
+      box-shadow: inset rem-calc(1.362 2.673 7 0) rgba(27, 36, 40, 0.56);
+      width: rem-calc(42);
+      height: rem-calc(16);
+      float:right;
+      margin-bottom: rem-calc(5);
+      &-wrapper{
+        display: inline-block;
+        &:hover{
+          cursor: pointer;
+        }
+    }
+      .point{
+        position: absolute;
+        height: rem-calc(24);
+        width: rem-calc(24);
+        left:rem-calc(-1);
+        top: rem-calc(-4);
+      }
+  }
+}

@@ -1,0 +1,46 @@
+.select-block {
+    background: rgba(255, 255, 255, 0.02);
+    border: rem-calc(1) solid rgba(146, 232, 254, 0.1);
+    border-radius: $global-radius;
+    margin: rem-calc(70 0 37);
+    width: 100%;
+    padding: rem-calc(20 24);
+    color: $white;
+    .select{
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        margin-left: rem-calc(2);
+        select{
+            font-family: Roboto-Light;
+            border: rem-calc(1) solid $success;
+            border-radius: rem-calc(5);
+            background: rgba(255, 255, 255, 0.02);
+            color: $white;
+            padding: rem-calc(15 13);
+            margin: 0;
+            height: rem-calc(55);
+        }
+        &:after {
+            content: url($imagesPath + "/down.png");;
+            padding: rem-calc(0 8);
+            color: $success;
+            box-sizing: border-box;
+            pointer-events: none;
+            position: absolute;
+            right: rem-calc(5);
+            top: rem-calc(15);
+            z-index: 1;
+        }
+        option {
+            color: $white;
+            border: rem-calc(1) solid $success;
+            background: $darkgray;
+            padding: rem-calc(16 22);
+            margin-top: rem-calc(10);
+        }
+    }
+    p{
+        font-family: Roboto-Bold;
+    }
+}
