@@ -89,13 +89,13 @@
             selectSearch: true,
         });
 
-        function dataCoin($crypt , $currency) {
+        function dataCoin($crypt , $currency , $sign) {
             $.getJSON('https://apiv2.bitcoinaverage.com/indices/global/ticker/' + $crypt + $currency, function(data) {
-                $("#price"+ $crypt).html(data.ask);
-                $("#hour" + $crypt + "-price").html(data.changes.price.hour + "$");
-                $("#day" + $crypt + "-price").html(data.changes.price.day + "$");
-                $("#week" + $crypt + "-price").html(data.changes.price.week + "$");
-                $("#month" + $crypt + "-price").html(data.changes.price.month + "$");
+                $("#price"+ $crypt).html($sign + data.ask);
+                $("#hour" + $crypt + "-price").html(data.changes.price.hour + $sign);
+                $("#day" + $crypt + "-price").html(data.changes.price.day + $sign);
+                $("#week" + $crypt + "-price").html(data.changes.price.week + $sign);
+                $("#month" + $crypt + "-price").html(data.changes.price.month + $sign);
                 if (data.changes.price.hour < 0){ $("#hour" + $crypt + "-price").css("color","#c80e24")}
                 if (data.changes.price.day < 0){ $("#day" + $crypt + "-price").css("color","#c80e24")}
                 if (data.changes.price.week < 0){ $("#week" + $crypt + "-price").css("color","#c80e24")}
@@ -110,15 +110,19 @@
                 if (data.changes.price.month < 0){ $("#month" + $crypt + "-percent").css("color","#c80e24")}
             });
         }
-        dataCoin('BTC', 'USD');
-        dataCoin('LTC', 'USD');
-        dataCoin('ETH', 'USD');
+        dataCoin('BTC', 'USD', '$');
+        dataCoin('LTC', 'USD', '$');
+        dataCoin('ETH', 'USD', '$');
 
         $(".jq-selectbox li").click(function () {
             var $i = $(this).text();
-            dataCoin('BTC', $i);
-            dataCoin('LTC', $i);
-            dataCoin('ETH', $i);
+            if($i == 'USD') {var $s = "$"}
+            if($i == 'EUR') {var $s = "€"}
+            if($i == 'RUB') {var $s = "₽"}
+            if($i == 'GBP') {var $s = "£"}
+            dataCoin('BTC', $i, $s);
+            dataCoin('LTC', $i, $s);
+            dataCoin('ETH', $i, $s);
         });
         $(".point").click(function () {
             if(this.classList.contains('on')) {
